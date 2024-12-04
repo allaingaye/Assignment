@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+        }
+        .header {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .header .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .header .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .main-content {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .text-content {
+            max-width: 600px;
+            flex: 1;
+            order: 1;
+        }
+        .text-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .text-content p {
+            font-size: 1.2em;
+            color: #b3b3b3;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+        }
+        
+        .cta-button:hover {
+            background-color: black; 
+            transform: scale(1.05); 
+        }
+        
+        .placeholder-image {
+            max-width: 500px;
+            width: 100%;
+            flex-shrink: 0;
+            order: 2;
+            transition: transform 1s ease, box-shadow 1s ease;
+        }
+        .placeholder-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .placeholder-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .placeholder-image:hover img {
+            transform: scale(1.02);
+        }
+        .random-info {
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+        }
+        .info-box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .info-box {
+            flex: 1 1 180px;
+            max-width: 200px;
+            border: 2px solid #007bff;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .info-box img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .info-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .info-box:hover img {
+            transform: scale(1.05);
+        }
+        .quote-section {
+            background-color: #e0e0e0;
+            padding: 50px;
+            text-align: center;
+            font-style: italic;
+        }
+        .cta-section {
+            background-color: #007bff;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .placeholder-image {
+                order: 1;
+                margin-bottom: 20px;
+            }
+            .text-content {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">e-commerce website</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Sign In</a>
+            <a href="#">About Us</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="text-content">
+            <h1>Welcome to my E-commerce website</h1>
+            <p>"Welcome to style shopping! We’re thrilled to have you here. Explore our curated selection of products and discover exclusive deals just for you. Whether you're shopping for yourself or a loved one, we’re here to make your experience easy and enjoyable. Happy shopping!"</p>
+            <button class="cta-button">Sign up</button>
+        </div>
+        <div class="placeholder-image">
+            <img src="profil.jpeg" alt="Profile Image">
+        </div>
+    </div>
+    <div class="random-info">
+        <h2>Some random information.</h2>
+        <div class="info-box-container">
+            <div class="info-box">
+                <img src="box1.jpeg" alt="Info Box Image 1">
+            </div>
+            <div class="info-box">
+                <img src="box2.png" alt="Info Box Image 2">
+            </div>
+            <div class="info-box">
+                <img src="box3.jpeg" alt="Info Box Image 3">
+            </div>
+            <div class="info-box">
+                <img src="box4.jpeg" alt="Info Box Image 4">
+            </div>
+        </div>
+    </div>
+    <div class="quote-section">
+        <p>"Discover a seamless shopping experience with our e-commerce platform, offering a wide range of products tailored to your needs. From fashion and electronics to home essentials, we bring top-quality items to your doorstep. Enjoy exclusive deals, secure payments, and fast delivery, all in one place!"</p>
+    </div>
+    <div class="cta-section">
+        <p>Signup for more!</p>
+        <button class="cta-button">Sign up</button>
+    </div>
+    <div class="footer">
+        <p>© 2024 Your Company. All rights reserved.</p>
+    </div>
+</body>
+</html>
